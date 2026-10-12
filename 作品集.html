@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>项目作品集 · 控制算法方向</title>
+<style>
+  :root{
+    --bg:#0d1117; --panel:#161b22; --panel2:#1c2330; --line:#2a3340;
+    --text:#e6edf3; --muted:#8b98a5; --accent:#4aa3ff; --accent2:#37c7a4;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{
+    background:var(--bg); color:var(--text);
+    font-family:"PingFang SC","Microsoft YaHei",-apple-system,Segoe UI,Roboto,sans-serif;
+    line-height:1.7; -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:960px;margin:0 auto;padding:0 24px;}
+  /* ---------- Hero ---------- */
+  header{
+    padding:64px 0 28px; text-align:center;
+    background:linear-gradient(180deg,#0d1a2b 0%,var(--bg) 100%);
+    border-bottom:1px solid var(--line);
+  }
+  header h1{font-size:34px;font-weight:800;letter-spacing:1px;}
+  header h1 span{color:var(--accent);}
+  header p{color:var(--muted);margin-top:10px;font-size:15px;}
+  .tags{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:18px;}
+  .tag{
+    background:rgba(74,163,255,.10); color:var(--accent);
+    border:1px solid rgba(74,163,255,.25); border-radius:20px;
+    padding:4px 12px; font-size:13px;
+  }
+  /* ---------- 视频 ---------- */
+  .video-sec{margin:40px 0;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px;}
+  .video-sec .cap{display:flex;align-items:center;gap:10px;padding:0 4px 12px;}
+  .video-sec .cap .dot{width:10px;height:10px;border-radius:50%;background:var(--accent2);}
+  .video-sec .cap span{font-weight:600;font-size:15px;}
+  video{width:100%;border-radius:10px;background:#000;display:block;}
+  .video-note{color:var(--muted);font-size:13px;padding:10px 4px 0;}
+  /* ---------- 区块 ---------- */
+  section{margin:48px 0;}
+  h2{
+    font-size:21px;font-weight:700;margin-bottom:22px;color:#fff;
+    display:flex;align-items:center;gap:12px;
+  }
+  h2::before{content:"";width:5px;height:20px;background:var(--accent);border-radius:3px;}
+  /* ---------- 关于 ---------- */
+  .about{
+    background:var(--panel);border:1px solid var(--line);border-radius:14px;
+    padding:26px 28px; font-size:15px; color:var(--text);
+  }
+  .about .hl{color:var(--accent2);font-weight:600;}
+  /* ---------- 项目卡片 ---------- */
+  .card{
+    background:var(--panel);border:1px solid var(--line);border-radius:14px;
+    padding:26px 28px; margin-bottom:22px; transition:border-color .2s;
+  }
+  .card:hover{border-color:var(--accent);}
+  .card .top{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;}
+  .card h3{font-size:18px;color:#fff;}
+  .card .time{color:var(--muted);font-size:13px;}
+  .card .badge{
+    background:rgba(55,199,164,.12);color:var(--accent2);
+    border:1px solid rgba(55,199,164,.3); border-radius:20px;
+    padding:3px 12px; font-size:12px; font-weight:600;
+  }
+  .card p{color:var(--muted);font-size:14px;margin:12px 0;}
+  .card ul{list-style:none;margin-top:10px;}
+  .card li{
+    position:relative; padding-left:18px; color:var(--text); font-size:14.5px; margin-bottom:9px;
+  }
+  .card li::before{
+    content:""; position:absolute; left:0; top:10px;
+    width:7px; height:7px; border-radius:2px; background:var(--accent);
+  }
+  .card li b{color:var(--accent);}
+  /* ---------- 技术栈 ---------- */
+  .stack{display:flex;flex-wrap:wrap;gap:10px;}
+  .stack .s{
+    background:var(--panel2);border:1px solid var(--line);border-radius:8px;
+    padding:8px 16px;font-size:14px;
+  }
+  .stack .s b{color:var(--accent);}
+  /* ---------- 奖项 ---------- */
+  .award{
+    display:flex;align-items:center;gap:14px;
+    background:var(--panel);border:1px solid var(--line);border-radius:12px;
+    padding:18px 22px; margin-bottom:14px;
+  }
+  .award .medal{font-size:26px;}
+  .award .t{font-size:15px;font-weight:600;}
+  .award .d{font-size:13px;color:var(--muted);}
+  /* ---------- 页脚 ---------- */
+  footer{
+    border-top:1px solid var(--line); margin-top:60px; padding:28px 0 60px;
+    text-align:center; color:var(--muted); font-size:13px;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <h1>项目作品集 <span>· 控制算法方向</span></h1>
+    <p>自动化本科 · 机器人控制 / 嵌入式 / 智能车</p>
+    <div class="tags">
+      <span class="tag">LQR</span><span class="tag">VMC</span>
+      <span class="tag">运动学建模</span><span class="tag">力控</span>
+      <span class="tag">嵌入式电控</span><span class="tag">PCB</span>
+      <span class="tag">功率控制</span>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <!-- 视频 -->
+  <div class="video-sec">
+    <div class="cap"><span class="dot"></span><span>项目作品展示视频</span></div>
+    <video controls preload="metadata" poster="">
+      <source src="项目作品展示_压缩版.mp4" type="video/mp4">
+      您的浏览器不支持视频播放，请点击下方链接下载查看。
+    </video>
+    <div class="video-note">▶ 建议在 HR 查看时播放 · 视频时长约 4 分钟 · 可全屏观看</div>
+  </div>
+
+  <!-- 关于 -->
+  <section>
+    <h2>关于我</h2>
+    <div class="about">
+      自动化专业本科生，专注 <span class="hl">机器人运动控制与算法落地</span>。
+      具备从 <span class="hl">运动学建模 → 控制器设计 → 实机调参</span> 的完整工程闭环能力，
+      在 RoboMaster 与全国大学生智能汽车竞赛中，将 LQR / VMC 等控制算法应用到四连杆 / 五连杆腿机器人、
+      二轴云台与轮腿底盘上，并取得国家级 / 省级奖项。
+    </div>
+  </section>
+
+  <!-- 项目 -->
+  <section>
+    <h2>项目经历</h2>
+
+    <div class="card">
+      <div class="top">
+        <h3>RoboMaster 机甲大师 · 四连杆腿步兵机器人 &amp; 二轴云台</h3>
+        <span class="time">2025.09 – 2026.07</span>
+      </div>
+      <p>四川大学 RoboMaster 火锅战队 · 电控组成员</p>
+      <ul>
+        <li>完成四 / 五连杆腿部<b>运动学与动力学建模</b>，基于 <b>LQR / VMC</b> 设计力控与平衡控制器并实机调参，实现稳定行走与对抗姿态调整。</li>
+        <li>独立完成<b>雷达二轴云台</b>电控，实现高精度角度闭环与火力控制。</li>
+        <li>调试麦轮 / 舵轮 / 全向轮底盘，实现<b>电机功率控制与分配策略及整车功率限制</b>，保障赛场不超上限、避免超功率罚时。</li>
+      </ul>
+      <span class="badge">全国三等奖 · 四川省二等奖</span>
+    </div>
+
+    <div class="card">
+      <div class="top">
+        <h3>全国大学生智能汽车竞赛 · 轮腿穿越赛道</h3>
+        <span class="time">2025.09 – 2026.07</span>
+      </div>
+      <p>四川大学智能车协会 · 会长</p>
+      <ul>
+        <li>负责轮腿穿越赛道<b>硬件 PCB</b> 制作与部分电控调试，使用 <b>LQR</b> 对<b>闭链五连杆腿部</b>进行运动与力控调试。</li>
+        <li>统筹协会备赛的项目管理，通过任务分解与进度跟踪提升各组协作效率，带队获<b>四川大学优秀学生社团</b>。</li>
+        <li>作为<b>省级唯一学生代表</b>在省赛开幕式上发言。</li>
+      </ul>
+      <span class="badge">西部赛区二等奖</span>
+    </div>
+  </section>
+
+  <!-- 技术栈 -->
+  <section>
+    <h2>技术栈</h2>
+    <div class="stack">
+      <span class="s"><b>控制算法</b> LQR · VMC · PID · 状态空间</span>
+      <span class="s"><b>建模</b> 运动学 · 动力学 · 力控</span>
+      <span class="s"><b>硬件</b> PCB · 电机驱动 · 功率控制</span>
+      <span class="s"><b>平台</b> STM32 · 嵌入式 C/C++</span>
+      <span class="s"><b>工具</b> MATLAB/Simulink · 示波器调试</span>
+    </div>
+  </section>
+
+  <!-- 奖项 -->
+  <section>
+    <h2>荣誉奖项</h2>
+    <div class="award">
+      <span class="medal">🏆</span>
+      <div><div class="t">2026 全国大学生机器人大赛 RoboMaster 机甲大师赛</div>
+      <div class="d">全国三等奖 / 四川省二等奖</div></div>
+    </div>
+    <div class="award">
+      <span class="medal">🏅</span>
+      <div><div class="t">2026 全国大学生智能汽车竞赛</div>
+      <div class="d">西部赛区二等奖</div></div>
+    </div>
+  </section>
+
+</div>
+
+<footer>
+  项目作品集 · 联系方式：<span style="color:var(--accent)">（请在此填写你的邮箱/手机）</span>
+</footer>
+
+</body>
+</html>
